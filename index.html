@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Authentication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="auth-card">
+
+            <div class="logo">🔐</div>
+
+            <h1>Welcome Back!</h1>
+            <p class="subtitle">Login or create your account</p>
+
+            <div class="tabs">
+                <button id="login-tab" class="tab active">Login</button>
+                <button id="register-tab" class="tab">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="login-email">Email Address</label>
+                    <input
+                        type="email"
+                        id="login-email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <input
+                        type="password"
+                        id="login-password"
+                        placeholder="Enter your password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="submit-btn">Login</button>
+
+                <p class="switch-text">
+                    Don't have an account?
+                    <button type="button" id="show-register">Register</button>
+                </p>
+            </form>
+
+            <!-- Registration Form -->
+            <form id="register-form" hidden>
+                <div class="input-group">
+                    <label for="register-name">Full Name</label>
+                    <input
+                        type="text"
+                        id="register-name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="register-email">Email Address</label>
+                    <input
+                        type="email"
+                        id="register-email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="register-password">Password</label>
+                    <input
+                        type="password"
+                        id="register-password"
+                        placeholder="Create a password"
+                        minlength="8"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        placeholder="Enter password again"
+                        minlength="8"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="submit-btn">Create Account</button>
+
+                <p class="switch-text">
+                    Already have an account?
+                    <button type="button" id="show-login">Login</button>
+                </p>
+            </form>
+
+            <!-- Message Area -->
+            <p id="message" role="status" aria-live="polite"></p>
+
+            <!-- Dashboard -->
+            <section id="dashboard" hidden>
+                <h2>🎉 Login Successful!</h2>
+                <p id="user-welcome"></p>
+                <button id="logout-btn" class="submit-btn">Logout</button>
+            </section>
+
+        </div>
+
+        <footer>
+            <p>Made with 💜 | Secure Login Demo</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
